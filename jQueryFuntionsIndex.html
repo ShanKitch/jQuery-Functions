@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="jQueryFunctionsStyle.css">
+        <title>jQuery Functions</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+             $(document).ready(function() {
+               //add class and .click
+               $('button.addClass').click(function () {
+                   $('p.addClass').addClass('pink');
+               })
+               $('button.after').click(function () {
+                   $('p.after').after('<i> R.....but the C was his first love!</i>')
+               })
+               $('button.append').click(function () {
+                   $('p.append').append('<i>Battlestar Galactica.</i>')
+               })
+               $('button.attr').click(function(){
+                $('img.kids').attr('height', function (index, currentvalue) {
+                return currentvalue - 50;
+               });
+               });  
+               $('button.before').click(function () {
+                   $('p.before').before('<i>STAR WARS</i>')
+               })
+                $('button.text').click(function(){
+                    $('p.text').text('Gryffindor, Ravenclaw, Hufflepuff, Slytherin')
+                })
+                $('button.html').click(function(){
+                    $('p.html').html('<img src="stanlee.jpg" class="stanlee" alt="stanlee" width="200px"/>')
+                })
+               $('button.val').click(function() {
+                    $('input:text').val('Tony Stark');
+                })
+               $('button.hide').click(function() {
+                    $('img.leotom').hide();
+                })
+                $('button.show').click(function() {
+                    $('img.leotom').show();
+                 })
+                $('button.toggle').click(function() {
+                    $('img.toggle').toggle();
+                })
+                $('button.fadeout').click(function() {
+                    $('img.fadeinfadeout').fadeOut(1800);
+                })
+                $('button.fadein').click(function() {
+                    $('img.fadeinfadeout').fadeIn(1800);
+                 })
+                $('button.slideUp').click(function(){
+                    $('p.slideupdown').slideUp();
+                })
+                $('button.slideDown').click(function(){
+                    $('p.slideupdown').slideDown();
+                })
+                $('button.slidetoggle').click(function(){
+                    $('img.slidetoggle').slideToggle(1800);
+                })
+
+             })
+    </script>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>jQuery Functions</h1>
+            <h2>An Interactive Demo of jQuery</h2>
+            <hr>
+        </div>
+        <div class="wrapper">
+            <div class="maincontentleft">
+                <h3>Add Class</h3>
+                <button class="addClass">Pink!</button>
+                <p class='addClass'>Click this button to make this sentence pink!</p>
+                <hr>
+                <h3>After</h3>
+                <button class='after'>Click Me For The Punch Line</button>
+                <p class='after'>What is a pirate's favorite letter?</p>
+                <hr>
+                <h3>Append</h3>
+                <button class='append'>What Comes Next?</button>
+                <p class='append'>Bears. Beets. </p>
+                <hr>
+                <h3>Attributes</h3>    
+                <button class='attr'>Shrink!</button>
+                <p class='attr'>Click to shrink the kids!</p>
+                <img src='kids.jpg' class='kids' width='400' height='300'>
+                <hr>
+                <h3>Before</h3>
+                <button class='before'>What Movie Franchise Is This?</button>
+                <br>
+                <p class='before'>"Episode IV:A New Hope", "Episode V:The Empire Strikes Back", "Episode VI:Return of the Jedi"</p>
+                <hr>
+                <h3>Text</h3>
+                <button class='text'>Fix the Hogwarts Houses!</button>
+                <p class='text'>Gryffinpuff, Ravendor , Hufflein ,Slytherclaw </p>
+                <hr>
+                <h3>HTML</h3>
+                <button class='html'>Who Said This?</button>
+                <p class='html'>"With great power comes great responsibility."</p>
+                <hr>
+                <h3>Val</h3>
+                <button class='val'>Reveal The Identity!</button>
+                <p>Who Is Iron Man?</p>
+                <p>Name: <input type='text' name='user'></p>
+                <hr>
+                <h3>Slide Up and Down</h3>
+                <button class='slideUp'>Slide Up</button>
+                <button class='slideDown'>Slide Down</button>
+                <p>Click the Slide Up button to make these "Goo Goo Dolls" lyrics slide up. Then, click the Slide Down button to slide them down again.</p>
+                <p class='slideupdown'>"I wanna wake up where you are
+                    I won't say anything at all
+                    So why don't you slide
+                    Yeah, I'm gonna let it slide"</p>
+            </div>
+            <div class="maincontentright">
+                <h3>Hide and Show</h3>
+                <button class='hide'>Hide This!</button>
+                <button class='show'>Show Me Again!</button>
+                <p class='hideShow'>Click the Hide button to hide this picture, then click the Show button to bring it back.</p>
+                <img src="leotom.jpg" class="leotom" alt="leotom" width="300px">
+                <hr>
+                <h3>Toggle</h3>
+                <button class='toggle'>The Snap!</button>
+                <p class='toggle'>You've got the Infinity Gauntlet! Click the button to snap the Avengers away and click again to bring them back!</p>
+                <img src='avengers.jpg' class='toggle' alt='avengers' width='450px'>
+                <hr>
+                <h3>Fade Out and Fade In</h3>
+                <button class='fadeout'>Beam Down</button>
+                <button class='fadein'>Beam Up</button>
+                <p>Click the Beam Down button to energize and beam down Kirk, McCoy and Spock. Click the Beam Up button to bring them back to The Enterprise.</p>
+                <img src="startrek.jpg" class='fadeinfadeout' alt="startrek" width="300px" height="300px">
+                <hr>
+                <h3>Slide Toggle</h3>
+                <button class='slidetoggle'>Gonna Let It Slide</button>
+                <p>Click this button to make the Goo Goo Dolls slide up and down.</p>
+                <img src="dolls.jpg" class="slidetoggle" alt="dolls" width="400px">
+            </div>
+    </div>
+    </body>
+</html>
